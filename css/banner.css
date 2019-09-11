@@ -1,0 +1,63 @@
+/* banner css */
+.banner-search {
+	text-align: center;
+}
+.banner-search-title,
+.banner-help-title {
+	width: 100%;
+	height: 22px;
+	padding: 15px 0 13px 0;
+}
+.banner-search-title {
+	color: #FECD09;
+}
+.banner-help-title {
+	color: #74beeb;
+}
+.banner-search-title > span,
+.banner-help-title > span {
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 22px;
+	padding-left: 23px;
+}
+.banner-search-title > span {
+	background: url(../img/icon-help_order.png) no-repeat 0 3px;
+}
+.banner-help-title > span {
+	background: url(../img/icon-help_order.png) no-repeat 0 -21px;
+}
+.banner-search > select {
+	width: 50%;
+	height: 20px;
+	display: block;
+	margin: 15px auto;
+	outline: none;
+	border-radius: 5px;
+}
+.banner-search-submit {
+	width: 45%;
+	height: 32px;
+	display: inline-block;
+	background-color: #FECD09;
+	color: #FFFFFF;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+}
+.banner-help {
+	text-align: center;
+	display: flex;
+	flex-flow: row wrap;
+}
+.banner-help a {
+	color: #74beeb;
+	font-weight: bold;
+}
+.banner-help a:hover {
+	color: #1fa4f0;
+}
+.banner-help > span {
+	flex: 1 0 50%;
+}

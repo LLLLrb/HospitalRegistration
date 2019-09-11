@@ -1,0 +1,207 @@
+/* content css */
+.content-tab-title {
+	width: 100%;
+	height: 38px;
+	background-color: #f4f6fa;
+}
+.content-tab-title > a {
+	width: 10%;
+	color: #74beeb;
+	font-weight: bold;
+	line-height: 38px;
+	padding: 0 40px;
+	display: inline-block;
+	text-align: center;
+}
+.content-tab-title .focus {
+	background-color: #74beeb;
+	color: #FFFFFF;
+}
+.content-tab-title ~ .content-tab-container {
+	box-sizing: border-box;
+	border: 1px solid #f4f6fa;
+	border-top: none;
+}
+.content-tab-title + .content-tab-container + .content-tab-container {
+	width: 100%;
+	height: 452px;
+	line-height: 452px;
+	text-align: center;
+	font-weight: bolder;
+	display: none;
+}
+.content-tab-subtitle {
+	width: 100%;
+	height: 46px;
+	padding: 0 10px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #f4f6fa;
+}
+.content-tab-subtitle > a {
+	width: 8%;
+	display: inline-block;
+	color: #000000;
+	padding: 3px 5px;
+	text-align: center;
+	font-size: 14px;
+	margin: 10px 0;
+}
+.content-tab-subtitle .focus {
+	background-color: #74beeb;
+	color: #FFFFFF;
+	border-radius: 5px;
+}
+.content-tab-subtitle ~ .content-tab-container {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 17px 12px 0 12px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.content-tab-subtitle + .content-tab-container ~ .content-tab-container {
+	width: 100%;
+	height: 406px;
+	line-height: 406px;
+	text-align: center;
+	font-weight: bolder;
+	display: none;
+}
+.content-tab-subtitle + .content-tab-container .itemSimple {
+	height: 25px;
+	flex-basis: calc(50% - 6px);
+	margin-top: 10px;
+	border-bottom: 1px dashed #dddddd;
+}
+.content-tab-subtitle + .content-tab-container .itemSimple > div > span {
+	line-height: 25px;
+	color: #979797;
+	font-size: 12px;
+}
+.content-tab-subtitle + .content-tab-container .itemSimple > div > span:first-child {
+	max-width: 60%;
+	float: left;
+	font-weight: bold;
+	word-break: keep-all;
+}
+.content-tab-subtitle + .content-tab-container .itemSimple > div > span:last-child {
+	float: right;
+}
+.content-tab-subtitle + .content-tab-container .item {
+	height: 98px;
+	flex-basis: calc(50% - 6px);
+	position: relative;
+	margin-bottom: 21px;
+}
+.content-tab-subtitle + .content-tab-container .item > img {
+	width: 110px;
+	height: 98px; 
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.content-tab-subtitle + .content-tab-container .item > div:first-of-type {
+	width: calc(100% - 120px);
+	height: 21px;
+	padding: 8px 0 0 0;
+	position: absolute;
+	top: 0;
+	left: 120px;
+}
+.content-tab-subtitle + .content-tab-container .item > div:first-of-type > span:first-child {
+	max-width: 50%;
+	line-height: 21px;
+	float: left;
+	color: #00b3ea;
+	font-weight: bold;
+	word-break: keep-all;
+}
+.content-tab-subtitle + .content-tab-container .item > div:first-of-type > span:last-child {
+	line-height: 21px;
+	float: right;
+	color: #979797;
+	font-size: 14px;
+}
+.content-tab-subtitle + .content-tab-container .item > p,
+.content-tab-subtitle + .content-tab-container .item > div:last-of-type {
+	max-width: calc((100% - 120px) * 0.95);
+	position: absolute;
+	left: 120px;
+	font-size: 15px;
+	color: #979797;
+	margin: 5px 0 0 0;
+}
+.content-tab-subtitle + .content-tab-container .item > p {
+	height: 20px;
+	top: 29px;
+	white-space: nowrap;
+}
+.content-tab-subtitle + .content-tab-container .item > div:last-of-type {
+	height: 40px;
+	top: 54px;
+	overflow: hidden;
+}
+.content-tab-subtitle + .content-tab-container .item > div:last-of-type::before {
+	width: 20px;
+	height: 100%;
+	float: left;
+	content: '';
+}
+.content-tab-subtitle + .content-tab-container .item > div:last-of-type::after {
+	width: 20px;
+	height: 50%;
+	float: right;
+	content: '...';
+	position: relative;
+	top: -20px;
+	left: 100%;
+	margin-left: -20px;
+	padding: 0 12px 0 8px;
+	background-image: radial-gradient(circle, white, white 50%, rgba(255, 255, 255, 0.5));
+}
+.content-tab-subtitle + .content-tab-container .item > div:last-of-type > span {
+	width: 100%;
+	float: right;
+	margin-left: -20px;
+}
+.content-tab-subtitle + .content-tab-container .more {
+	width: 100%;
+	height: 42px;
+	text-align: center;
+}
+.content-tab-subtitle + .content-tab-container .more > a {
+	line-height: 42px;
+	color: #00b3ea;
+	font-weight: bold;
+}
+.content-news-title,
+.content-close-title {
+	width: 100%;
+	height: 38px;
+	padding: 0 21px;
+	box-sizing: border-box;
+	background-color: #f4f6fa;
+}
+.content-news-title {
+	color: #FEC009;
+}
+.content-close-title {
+	color: #74beeb;
+}
+.content-news-title > span,
+.content-close-title > span {
+	line-height: 38px;
+	font-weight: bold;
+}
+.content-news-title > a,
+.content-close-title > a {
+	float: right;
+	font-weight: initial;
+	font-size: 14px;
+	line-height: 38px;
+	color: #000000;
+}
+.content-news-title > a:hover,
+.content-close-title > a:hover {
+	color: #696969;
+}
