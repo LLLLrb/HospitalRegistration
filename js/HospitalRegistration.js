@@ -127,9 +127,22 @@ $.fn.bannerSlider = function (){
 }
 
 
+$.fn.bannerSearch = function (){
+	let bannerSearch = $(this),
+		bannerSearchSelects = $('select', bannerSearch);
+		
+	bannerSearchSelects.on('change', function (){
+		let val = $(this).val();
+		console.log(val);
+	});
+		
+}
+
+
 $().ready(function (){
 	$('.header-search').search();
 	$('.content-tab').switchTab('content-tab-title', 'content-tab-container', 'focus');
 	$('.content-tab-title + .content-tab-container').switchTab('content-tab-subtitle', 'content-tab-container', 'focus');
 	$('.banner-slider').bannerSlider();
+	$('.banner-search').bannerSearch();
 });

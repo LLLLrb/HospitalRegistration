@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset="utf-8" lang="zh-cn">
 		<title>挂号平台</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="stylesheet" type="text/css" href="css/layout.css"/>
@@ -457,7 +457,10 @@
 				<div class="rightContainer">
 					<div class="banner-search">
 						<div class="banner-search-title"><span>快速预约</span></div>
-						<select><option>医院地区</option></select>
+						<select data-func="getDistinctArea">
+							<option>医院地区1</option>
+							<option>医院地区2</option>
+						</select>
 						<select><option>医院等级</option></select>
 						<select><option>医院名称</option></select>
 						<select><option>医院科室</option></select>
@@ -622,5 +625,6 @@
 		<div class="footer">Copyright © 2019-9</div>
 			
 	</body>
+	<script src="../js/data.js"></script>
 	<script src="js/HospitalRegistration.js"></script>
 </html>
