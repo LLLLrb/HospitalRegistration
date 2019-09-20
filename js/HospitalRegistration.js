@@ -130,12 +130,45 @@ $.fn.bannerSlider = function (){
 $.fn.bannerSearch = function (){
 	let bannerSearch = $(this),
 		bannerSearchSelects = $('select', bannerSearch);
+	
+	//自定义更新select > option内容的事件
+	bannerSearchSelects.on('updatedata', function (params){
+		let data = AjaxRemoteGetData[$(this).attr('data-func')].apply(this, $(this).attr('data-params').split(','));
 		
+		$(this).find('option').remove();
+		
+		for (d in data) {			
+			$(this).append('<option>' + data[d] + '</option>');
+		}
+	});
+	
+	//select发生change时，更新select > option内容
 	bannerSearchSelects.on('change', function (){
-		let val = $(this).val();
-		console.log(val);
+		let index = bannerSearchSelects.index(this),
+			params = $(this).attr('data-params');
+			
+		//下一个
+		params = params ? params.split(',') : [];
+		params.push($(this).val());
+		bannerSearchSelects.eq(index + 1)
+			.attr('data-params', params)
+			.triggerHandler('updatedata', params);
+			
+		//剩余的	
+		console.log(bannerSearch.find('select:gt(' + (index + 1) +  ')'));
+		bannerSearch.find('select:gt(' + (index + 1) +  ')').each(function (){
+			$(this)
+				.attr('data-params', '')
+				.triggerHandler('updatedata', params);
+		});
+			
+	
+		
+		
 	});
 		
+	// 第一个select更新内容
+	bannerSearchSelects.eq(0).triggerHandler('updatedata');
 }
 
 

@@ -457,13 +457,18 @@
 				<div class="rightContainer">
 					<div class="banner-search">
 						<div class="banner-search-title"><span>快速预约</span></div>
-						<select data-func="getDistinctArea">
-							<option>医院地区1</option>
-							<option>医院地区2</option>
+						<select data-func="getDistinctArea" data-params="">
+							<option>医院地区</option>
 						</select>
-						<select><option>医院等级</option></select>
-						<select><option>医院名称</option></select>
-						<select><option>医院科室</option></select>
+						<select data-func="getLeveByArea" data-params="">
+							<option>医院等级</option>
+						</select>
+						<select data-func="getNameByAreaAndLevel" data-params="">
+							<option>医院名称</option>
+						</select>
+						<select data-func="getDepartmentArrByHospitalName" data-params="">
+							<option>医院科室</option>
+						</select>
 						<button class="banner-search-submit">快速查询</button>
 					</div>
 					<div class="banner-help">
